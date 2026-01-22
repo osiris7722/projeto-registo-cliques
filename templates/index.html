@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <h1>Registo de Interações</h1>
+        
         <div class="grid-botoes">
             <button onclick="enviarClique('Botão 1')">Botão 1</button>
             <button onclick="enviarClique('Botão 2')">Botão 2</button>
@@ -16,10 +17,17 @@
             <button onclick="enviarClique('Botão 4')">Botão 4</button>
         </div>
 
-        <div id="info-clique" class="resultado">
-            <p>Clica num botão para registar.</p>
+        <div id="resultado" class="resultado">
+            <p>Aguardando interação...</p>
+        </div>
+
+        <hr>
+        
+        <div class="export-area">
+            <a href="/exportar" class="btn-export">Exportar para Excel (CSV)</a>
         </div>
     </div>
+
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
